@@ -68,7 +68,7 @@ class Server:
                 else:
                     page_dict['next_page'] = None
 
-                if not page <= 1:
+                if page > 1:
                     page_dict['prev_page'] = page - 1
                 else:
                     page_dict['prev_page'] = None
