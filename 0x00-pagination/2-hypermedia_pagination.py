@@ -51,7 +51,7 @@ class Server:
                 return []
 
     def get_hyper(self, page: int = 1, page_size: int = 10) -> Dict:
-            """Returns information about a page.
+            """Returns information about a page in form of a dictionary.
             """
             page_dict = {}
             dataset = self.dataset()
