@@ -18,7 +18,6 @@ class FIFOCache(BaseCaching):
         with the given key and item
         """
 
-        self.counter += 1
         if key and item:
             if self.counter > self.MAX_ITEMS:
                 first_key = next(iter(self.cache_data.keys()))
@@ -26,6 +25,7 @@ class FIFOCache(BaseCaching):
                 print("DISCARD: {}".format(first_key))
                 self.counter -= 2
             self.cache_data[key] = item
+        self.counter += 1
 
     def get(self, key):
         """ get method: retreives an objece with the provided
