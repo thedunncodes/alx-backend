@@ -23,6 +23,10 @@ class LRUCache(BaseCaching):
         self.rank_values = []
 
     def get_least_key(self, search_value: int):
+        """ Method to return the least ranked
+        key in the LRU dict
+        """
+
         key, value = [], []
         for k, v in self.rank_dict.items():
             key.append(k)
